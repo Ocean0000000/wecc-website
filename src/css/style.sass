@@ -1,0 +1,67 @@
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+@mixin flex-center()
+    display: flex
+    justify-content: center
+    align-items: center
+
+@media screen and (min-width: 0em)
+    .nav__list
+        display: flex
+        justify-content: space-around
+        height: 10vh
+
+        .nav__list-item
+            display: none
+
+        #navBurger
+            @include flex-center()
+            flex-flow: column nowrap
+            position: relative
+            left: 40%
+            top: 40%
+            height: fit-content
+            
+            .burger-line
+                width: 1.75em
+                height: .25em
+                border-radius: 0.25em
+                border: solid black
+                margin: .1em 0
+
+    /*   .nav__list-item
+           list-style: none
+           font: 400 1em "Montserrat", "Lato", "Times New Roman", sans-serif
+              
+           .nav__link
+               text-decoration: none
+               color: #000 
+               
+    #wrapper
+        width: 90%
+        height: fit-content
+        margin: auto 5%
+
+    .landing
+        height: 100vh
+        @include flex-center
+        flex-flow: column nowrap
+        
+        .content
+            width: 75%
+            font: 700 2.5rem "Montserrat", "Lato", "Times New Roman", sans-serif
+            position: relative
+            bottom: 10%
+
+        .content:nth-child(1)
+            margin: 0 0 1em 0
+
+    .copyright
+        height: 10vh
+        @include flex-center
+        background: #333
+        color: #eee
+        font: 400 .625rem "Montserrat", "Lato", "Times New Roman", sans-serif

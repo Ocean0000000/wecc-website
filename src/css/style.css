@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (min-width: 0em) {
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 10vh;
+  }
+  .nav__list .nav__list-item {
+    display: none;
+  }
+  .nav__list #navBurger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    position: relative;
+    left: 40%;
+    top: 40%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .nav__list #navBurger .burger-line {
+    width: 1.75em;
+    height: .25em;
+    border-radius: 0.25em;
+    border: solid black;
+    margin: .1em 0;
+  }
+  /*   .nav__list-item
+           list-style: none
+           font: 400 1em "Montserrat", "Lato", "Times New Roman", sans-serif
+
+           .nav__link
+               text-decoration: none
+               color: #000 */
+  #wrapper {
+    width: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: auto 5%;
+  }
+  .landing {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  .landing .content {
+    width: 75%;
+    font: 700 2.5rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+    position: relative;
+    bottom: 10%;
+  }
+  .landing .content:nth-child(1) {
+    margin: 0 0 1em 0;
+  }
+  .copyright {
+    height: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #333;
+    color: #eee;
+    font: 400 .625rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+  }
+}
+/*# sourceMappingURL=style.css.map */
