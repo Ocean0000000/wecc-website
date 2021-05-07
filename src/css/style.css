@@ -38,7 +38,24 @@
     height: -moz-fit-content;
     height: fit-content;
   }
-  .nav__list #navBurger .burger-line {
+  .nav__list #navBurger:active {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+    -webkit-transition: 2s ease-in;
+    transition: 2s ease-in;
+  }
+  .nav__list #navBurger:active .burger-line1 {
+    -webkit-transform: translateY(0.5em) rotate(45deg);
+            transform: translateY(0.5em) rotate(45deg);
+  }
+  .nav__list #navBurger:active .burger-line2 {
+    visibility: hidden;
+  }
+  .nav__list #navBurger:active .burger-line3 {
+    -webkit-transform: translateY(-0.5em) rotate(-45deg);
+            transform: translateY(-0.5em) rotate(-45deg);
+  }
+  .nav__list #navBurger .burger-line1, .nav__list #navBurger .burger-line2, .nav__list #navBurger .burger-line3 {
     width: 1.5em;
     height: .25em;
     border-radius: 1em;

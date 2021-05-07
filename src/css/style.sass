@@ -24,13 +24,26 @@
             left: 40%
             top: 40%
             height: fit-content
-            
-            .burger-line
+            &:active
+                transform: scale(1.25)
+                transition: 2s ease-in
+                .burger-line1
+                    transform: translateY(0.5em) rotate(45deg)
+                
+                .burger-line2
+                    visibility: hidden
+
+                .burger-line3
+                    transform: translateY(-0.5em) rotate(-45deg)
+                    
+
+            .burger-line1, .burger-line2, .burger-line3
                 width: 1.5em
                 height: .25em
                 border-radius: 1em
                 background: black
                 margin: 0 0 .25em 0
+
 
     /*   .nav__list-item
            list-style: none
