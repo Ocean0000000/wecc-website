@@ -9,68 +9,101 @@
     align-items: center
 
 @media screen and (min-width: 0em)
-    .nav__list
+    .nav
         display: flex
-        justify-content: space-around
+        width: 100%
         height: 10vh
 
-        .nav__list-item
-            display: none
+        .nav__list
+            display: flex
+            flex-flow: column nowrap
+            width: 100%
+            height: 100vh
+            background: white
+            visibility: hidden
+            z-index: 1
+            
+            .nav__list-item
+                list-style: none
+                height: auto
+                font: 400 1em "Montserrat", "Lato", "Times New Roman", sans-serif
+                color: white
+                text-align: center
+                padding: 15% 0
 
-        #navBurger
+                .nav__link
+                    text-decoration: none
+                    color: #000
+
+        .show
+            visibility: visible
+
+        #navBurger //add @media for 0-238px
             @include flex-center()
             flex-flow: column nowrap
-            position: relative
-            left: 40%
-            top: 40%
+            width: fit-content
             height: fit-content
-            &:active
-                transform: scale(1.25)
-                transition: 2s ease-in
-                .burger-line1
-                    transform: translateY(0.5em) rotate(45deg)
-                
-                .burger-line2
-                    visibility: hidden
-
-                .burger-line3
-                    transform: translateY(-0.5em) rotate(-45deg)
-                    
+            position: relative
+            right: 12.5%
+            top: 25%
+            z-index: 1
 
             .burger-line1, .burger-line2, .burger-line3
                 width: 1.5em
                 height: .25em
                 border-radius: 1em
                 background: black
-                margin: 0 0 .25em 0
+                margin: 0.125em 0 0.125em 0
 
+        .navBurgerToggle
+            .burger-line1
+                transform: translateY(0.5em) rotate(45deg)
+                transition: .1s ease-in
+            
+            .burger-line2
+                visibility: hidden
 
-    /*   .nav__list-item
-           list-style: none
-           font: 400 1em "Montserrat", "Lato", "Times New Roman", sans-serif
-              
-           .nav__link
-               text-decoration: none
-               color: #000 
-               
+            .burger-line3
+                transform: translateY(-0.5em) rotate(-45deg)
+                transition: .1s ease-in
+                        
     #wrapper
         width: 90%
         height: fit-content
         margin: auto 5%
 
-    .landing
-        height: 100vh
-        @include flex-center
-        flex-flow: column nowrap
-        
-        .content
-            width: 75%
-            font: 700 2.5rem "Montserrat", "Lato", "Times New Roman", sans-serif
-            position: relative
-            bottom: 10%
+        .landing
+            height: 100vh
+            @include flex-center
+            flex-flow: column nowrap
+            
+            .content
+                width: 75%
+                font: 700 2.5rem "Montserrat", "Lato", "Times New Roman", sans-serif
+                position: relative
+                bottom: 10%
 
-        .content:nth-child(1)
-            margin: 0 0 1em 0
+            .content:nth-child(1)
+                margin: 0 0 1em 0
+
+    .tournament
+        height: 100vh
+        @include flex-center()
+        flex-flow: row wrap
+        
+        .tournament__text
+            width: 90%
+            height: auto
+            font: 400 2rem "Montserrat", "Lato", "Times New Roman", sans-serif
+            text-align: center
+
+        .tournament__btn
+            @include flex-center()
+            width: 60%
+            height: 8%
+            font: 400 1rem "Montserrat", "Lato", "Times New Roman", sans-serif
+            border: .0625em solid #000
+            border-radius: .25em
 
     .copyright
         height: 10vh

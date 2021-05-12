@@ -6,18 +6,43 @@
 }
 
 @media screen and (min-width: 0em) {
-  .nav__list {
+  .nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    width: 100%;
     height: 10vh;
   }
-  .nav__list .nav__list-item {
-    display: none;
+  .nav .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    visibility: hidden;
+    z-index: 1;
   }
-  .nav__list #navBurger {
+  .nav .nav__list .nav__list-item {
+    list-style: none;
+    height: auto;
+    font: 400 1em "Montserrat", "Lato", "Times New Roman", sans-serif;
+    color: white;
+    text-align: center;
+    padding: 15% 0;
+  }
+  .nav .nav__list .nav__list-item .nav__link {
+    text-decoration: none;
+    color: #000;
+  }
+  .nav .show {
+    visibility: visible;
+  }
+  .nav #navBurger {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -31,44 +56,39 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
-    position: relative;
-    left: 40%;
-    top: 40%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    position: relative;
+    right: 12.5%;
+    top: 25%;
+    z-index: 1;
   }
-  .nav__list #navBurger:active {
-    -webkit-transform: scale(1.25);
-            transform: scale(1.25);
-    -webkit-transition: 2s ease-in;
-    transition: 2s ease-in;
-  }
-  .nav__list #navBurger:active .burger-line1 {
-    -webkit-transform: translateY(0.5em) rotate(45deg);
-            transform: translateY(0.5em) rotate(45deg);
-  }
-  .nav__list #navBurger:active .burger-line2 {
-    visibility: hidden;
-  }
-  .nav__list #navBurger:active .burger-line3 {
-    -webkit-transform: translateY(-0.5em) rotate(-45deg);
-            transform: translateY(-0.5em) rotate(-45deg);
-  }
-  .nav__list #navBurger .burger-line1, .nav__list #navBurger .burger-line2, .nav__list #navBurger .burger-line3 {
+  .nav #navBurger .burger-line1, .nav #navBurger .burger-line2, .nav #navBurger .burger-line3 {
     width: 1.5em;
     height: .25em;
     border-radius: 1em;
     background: black;
-    margin: 0 0 .25em 0;
+    margin: 0.125em 0 0.125em 0;
   }
-  /*   .nav__list-item
-           list-style: none
-           font: 400 1em "Montserrat", "Lato", "Times New Roman", sans-serif
-
-           .nav__link
-               text-decoration: none
-               color: #000 */
+  .nav .navBurgerToggle .burger-line1 {
+    -webkit-transform: translateY(0.5em) rotate(45deg);
+            transform: translateY(0.5em) rotate(45deg);
+    -webkit-transition: .1s ease-in;
+    transition: .1s ease-in;
+  }
+  .nav .navBurgerToggle .burger-line2 {
+    visibility: hidden;
+  }
+  .nav .navBurgerToggle .burger-line3 {
+    -webkit-transform: translateY(-0.5em) rotate(-45deg);
+            transform: translateY(-0.5em) rotate(-45deg);
+    -webkit-transition: .1s ease-in;
+    transition: .1s ease-in;
+  }
   #wrapper {
     width: 90%;
     height: -webkit-fit-content;
@@ -76,7 +96,7 @@
     height: fit-content;
     margin: auto 5%;
   }
-  .landing {
+  #wrapper .landing {
     height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -92,14 +112,52 @@
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
   }
-  .landing .content {
+  #wrapper .landing .content {
     width: 75%;
     font: 700 2.5rem "Montserrat", "Lato", "Times New Roman", sans-serif;
     position: relative;
     bottom: 10%;
   }
-  .landing .content:nth-child(1) {
+  #wrapper .landing .content:nth-child(1) {
     margin: 0 0 1em 0;
+  }
+  .tournament {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .tournament .tournament__text {
+    width: 90%;
+    height: auto;
+    font: 400 2rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+    text-align: center;
+  }
+  .tournament .tournament__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 60%;
+    height: 8%;
+    font: 400 1rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+    border: .0625em solid #000;
+    border-radius: .25em;
   }
   .copyright {
     height: 10vh;

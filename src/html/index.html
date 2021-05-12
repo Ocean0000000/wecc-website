@@ -6,32 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ocean Van</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css"> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
     <header> 
-        <nav>
+        <nav class="nav">
             <ul class="nav__list" id="navList">
-                <div id="navBurger">
-                    <span class="burger-line1"></span>
-                    <span class="burger-line2"></span>
-                    <span class="burger-line3"></span>
-                </div>
                 <li class="nav__list-item home"><a href="#" class="nav__link">Home</a></li>
-                <li class="nav__list-item calendar"><a href="#" class="nav__link">Calendar</a></li>
-                <li class="nav__list-item knowledge-base"><a href="#" class="nav__link">Knowledge Base</a></li>
+                <li class="nav__list-item tournaments"><a href="#" class="nav__link">Tournaments</a></li>
+                <li class="nav__list-item coaches-and-tds"><a href="#" class="nav__link">Coaches and TDs</a></li>
                 <li class="nav__list-item about"><a href="#" class="nav__link">About</a></li>
-                <li class="nav__list-item our-team"><a href="#" class="nav__link">Calendar</a></li>
             </ul>
+            <div id="navBurger" role="navigation">
+                <span class="burger-line1"></span>
+                <span class="burger-line2"></span>
+                <span class="burger-line3"></span>
+            </div>
         </nav>
     </header>
     <main id="wrapper">
         <section class="landing" role="landing">
             <h1 class="content">Hello.</h1>
             <h1 class="content">We are WECC.</h1>
+        </section>
+        <section class="tournament" role="tournament">
+            <h1 class="tournament__text">K-12 Tournaments Every Month</h1>
+            <a class="tournament__btn" role="button">Tournaments</button>
         </section>
     </main>
     <footer class="footer">
