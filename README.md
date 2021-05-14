@@ -1,2 +1,2 @@
-Link to view the website via Netlify:
+Link to view the website:
 https://chesschampions.netlify.app/

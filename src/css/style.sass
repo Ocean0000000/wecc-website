@@ -22,6 +22,7 @@
             background: white
             visibility: hidden
             z-index: 1
+            position: absolute
             
             .nav__list-item
                 list-style: none
@@ -43,9 +44,9 @@
             flex-flow: column nowrap
             width: fit-content
             height: fit-content
-            position: relative
-            right: 12.5%
-            top: 25%
+            position: absolute
+            right: 10%
+            top: 5%
             z-index: 1
 
             .burger-line1, .burger-line2, .burger-line3
@@ -73,37 +74,36 @@
         margin: auto 5%
 
         .landing
-            height: 100vh
             @include flex-center
             flex-flow: column nowrap
+            margin: 25vh 0
             
-            .content
+            .title
                 width: 75%
                 font: 700 2.5rem "Montserrat", "Lato", "Times New Roman", sans-serif
-                position: relative
-                bottom: 10%
+                text-align: center
 
-            .content:nth-child(1)
-                margin: 0 0 1em 0
 
-    .tournament
-        height: 100vh
+    .content
         @include flex-center()
-        flex-flow: row wrap
-        
-        .tournament__text
+        flex-direction: column
+        margin: 50vh 0 25vh 0
+
+        .content__text
             width: 90%
             height: auto
             font: 400 2rem "Montserrat", "Lato", "Times New Roman", sans-serif
             text-align: center
+            margin: 0 0 1em 0
 
-        .tournament__btn
+        .content__btn
             @include flex-center()
-            width: 60%
-            height: 8%
-            font: 400 1rem "Montserrat", "Lato", "Times New Roman", sans-serif
+            width: 10em
+            height: 3em
             border: .0625em solid #000
-            border-radius: .25em
+            font: 400 1rem "Montserrat", "Lato", "Times New Roman", sans-serif
+            color: black
+            text-decoration: none
 
     .copyright
         height: 10vh
