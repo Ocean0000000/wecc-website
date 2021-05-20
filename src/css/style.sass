@@ -1,60 +1,73 @@
-* 
-    margin: 0
-    padding: 0
-    box-sizing: border-box
+$primary-dark: #333
+$primary-light: #eee
+$accent: #b30000
 
 @mixin flex-center()
     display: flex
     justify-content: center
     align-items: center
 
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
 @media screen and (min-width: 0em)
     .nav
-        display: flex
         width: 100%
-        height: 10vh
+        max-height: 10vh
+
+        display: flex
 
         .nav__list
-            display: flex
-            flex-flow: column nowrap
             width: 100%
             height: 100vh
-            background: white
-            visibility: hidden
-            z-index: 1
+
+            display: flex
+            flex-flow: column nowrap
             position: absolute
+           
+            background: $primary-light
+
+            visibility: hidden
             
             .nav__list-item
-                list-style: none
                 height: auto
+
                 font: 400 1em "Montserrat", "Lato", "Times New Roman", sans-serif
-                color: white
+                color: $primary-light
                 text-align: center
+                
+                list-style: none
+
                 padding: 15% 0
 
                 .nav__link
                     text-decoration: none
-                    color: #000
+                    color: $primary-dark
 
         .show
             visibility: visible
 
         #navBurger //add @media for 0-238px
-            @include flex-center()
-            flex-flow: column nowrap
             width: fit-content
             height: fit-content
-            position: absolute
-            right: 10%
-            top: 5%
+
+            @include flex-center()
+            flex-flow: column nowrap
+            transform: translate(85vw, 2.5vh)
+
             z-index: 1
 
             .burger-line1, .burger-line2, .burger-line3
                 width: 1.5em
                 height: .25em
-                border-radius: 1em
-                background: black
+
                 margin: 0.125em 0 0.125em 0
+
+                border-radius: 1em
+                background: $primary-dark
+
 
         .navBurgerToggle
             .burger-line1
@@ -71,43 +84,60 @@
     #wrapper
         width: 90%
         height: fit-content
+
         margin: auto 5%
 
+        background
         .landing
+            max-height: 90vh
+
             @include flex-center
             flex-flow: column nowrap
-            margin: 25vh 0
-            
+
+            padding: 25vh 0
+
             .title
                 width: 75%
+
                 font: 700 2.5rem "Montserrat", "Lato", "Times New Roman", sans-serif
+                text-align: center
+            
+            .logo
+
+        .content
+            @include flex-center()
+            flex-direction: column
+            margin: 25vh 0
+
+            .content__text
+                width: 90%
+
+                margin: 0 0 1em 0
+
+                font: 400 1.6875rem "Montserrat", "Lato", "Times New Roman", sans-serif
                 text-align: center
 
 
-    .content
-        @include flex-center()
-        flex-direction: column
-        margin: 50vh 0 25vh 0
+            .content__btn
+                width: 10em
 
-        .content__text
-            width: 90%
-            height: auto
-            font: 400 2rem "Montserrat", "Lato", "Times New Roman", sans-serif
-            text-align: center
-            margin: 0 0 1em 0
+                @include flex-center()
 
-        .content__btn
-            @include flex-center()
-            width: 10em
-            height: 3em
-            border: .0625em solid #000
-            font: 400 1rem "Montserrat", "Lato", "Times New Roman", sans-serif
-            color: black
-            text-decoration: none
+                border: .0625em solid $primary-dark
+                padding: .75em 0
+
+                font: 400 1rem "Montserrat", "Lato", "Times New Roman", sans-serif
+                color: $primary-dark
+                text-decoration: none
+
+    .footer
+        background: $primary-dark
+
+        .footer__text
+            font: 400 .625rem "Montserrat", "Lato", "Times New Roman", sans-serif
+            color: $primary-light
 
     .copyright
-        height: 10vh
+        min-height: 10vh
+
         @include flex-center
-        background: #333
-        color: #eee
-        font: 400 .625rem "Montserrat", "Lato", "Times New Roman", sans-serif
