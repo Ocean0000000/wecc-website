@@ -114,8 +114,12 @@
   }
   #wrapper .landing .title {
     width: 75%;
-    font: 700 2.5rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+    font: 700 1.5rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+    color: #333;
     text-align: center;
+  }
+  #wrapper .landing .logo {
+    max-width: 50%;
   }
   #wrapper .content {
     display: -webkit-box;

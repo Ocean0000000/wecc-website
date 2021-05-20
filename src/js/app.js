@@ -9,5 +9,5 @@ $('#navBurger').on('click', function() {
     $('#navList').toggleClass('show');
 });
 
-var animateText = (document.querySelectorAll(".content"));
-// console.log(animateText);
+var animateText = $('.title');
+// console.log(animateText)
