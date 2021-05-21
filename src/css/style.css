@@ -24,20 +24,20 @@
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
     position: absolute;
-    background: #eee;
+    background: #fefefe;
     visibility: hidden;
   }
   .nav .nav__list .nav__list-item {
     height: auto;
     font: 400 1em "Montserrat", "Lato", "Times New Roman", sans-serif;
-    color: #eee;
+    color: #f8f8f8;
     text-align: center;
     list-style: none;
     padding: 15% 0;
   }
   .nav .nav__list .nav__list-item .nav__link {
     text-decoration: none;
-    color: #333;
+    color: #222;
   }
   .nav .show {
     visibility: visible;
@@ -71,7 +71,7 @@
     height: .25em;
     margin: 0.125em 0 0.125em 0;
     border-radius: 1em;
-    background: #333;
+    background: #222;
   }
   .nav .navBurgerToggle .burger-line1 {
     -webkit-transform: translateY(0.5em) rotate(45deg);
@@ -115,10 +115,10 @@
   #wrapper .landing .title {
     width: 75%;
     font: 700 1.5rem "Montserrat", "Lato", "Times New Roman", sans-serif;
-    color: #333;
+    color: #222;
     text-align: center;
   }
-  #wrapper .landing .logo {
+  #wrapper .landing .landing-logo {
     max-width: 50%;
   }
   #wrapper .content {
@@ -154,18 +154,18 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border: 0.0625em solid #333;
+    border: 0.0625em solid #222;
     padding: .75em 0;
     font: 400 1rem "Montserrat", "Lato", "Times New Roman", sans-serif;
-    color: #333;
+    color: #222;
     text-decoration: none;
   }
   .footer {
-    background: #333;
+    background: #222;
   }
   .footer .footer__text {
     font: 400 .625rem "Montserrat", "Lato", "Times New Roman", sans-serif;
-    color: #eee;
+    color: #f8f8f8;
   }
   .copyright {
     min-height: 10vh;
