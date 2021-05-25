@@ -7,15 +7,13 @@
 
 @media screen and (min-width: 0em) {
   .nav {
-    width: 100%;
-    max-height: 10vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
+    max-height: 10vh;
   }
   .nav .nav__list {
-    width: 100%;
-    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -23,12 +21,13 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
+    width: 100%;
+    height: 100vh;
     position: absolute;
-    background: #fefefe;
+    background: #f8f8f8;
     visibility: hidden;
   }
   .nav .nav__list .nav__list-item {
-    height: auto;
     font: 400 1em "Montserrat", "Lato", "Times New Roman", sans-serif;
     color: #f8f8f8;
     text-align: center;
@@ -43,12 +42,6 @@
     visibility: visible;
   }
   .nav #navBurger {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -68,16 +61,16 @@
   }
   .nav #navBurger .burger-line1, .nav #navBurger .burger-line2, .nav #navBurger .burger-line3 {
     width: 1.5em;
-    height: .25em;
+    height: 0.25em;
     margin: 0.125em 0 0.125em 0;
-    border-radius: 1em;
     background: #222;
+    border-radius: 1em;
   }
   .nav .navBurgerToggle .burger-line1 {
     -webkit-transform: translateY(0.5em) rotate(45deg);
             transform: translateY(0.5em) rotate(45deg);
-    -webkit-transition: .1s ease-in;
-    transition: .1s ease-in;
+    -webkit-transition: 0.1s ease-in;
+    transition: 0.1s ease-in;
   }
   .nav .navBurgerToggle .burger-line2 {
     visibility: hidden;
@@ -85,8 +78,8 @@
   .nav .navBurgerToggle .burger-line3 {
     -webkit-transform: translateY(-0.5em) rotate(-45deg);
             transform: translateY(-0.5em) rotate(-45deg);
-    -webkit-transition: .1s ease-in;
-    transition: .1s ease-in;
+    -webkit-transition: 0.1s ease-in;
+    transition: 0.1s ease-in;
   }
   #wrapper {
     width: 90%;
@@ -144,7 +137,6 @@
     text-align: center;
   }
   #wrapper .content .content__btn {
-    width: 10em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -154,21 +146,21 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 10em;
+    padding: 0.75em 0;
     border: 0.0625em solid #222;
-    padding: .75em 0;
     font: 400 1rem "Montserrat", "Lato", "Times New Roman", sans-serif;
     color: #222;
     text-decoration: none;
   }
   .footer {
-    background: #222;
+    background: #f8f8f8;
   }
   .footer .footer__text {
     font: 400 .625rem "Montserrat", "Lato", "Times New Roman", sans-serif;
-    color: #f8f8f8;
+    color: #222;
   }
-  .copyright {
-    min-height: 10vh;
+  .footer .social {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -178,6 +170,117 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0.5em 0;
+  }
+  .footer .social .facebook {
+    width: 2em;
+    height: 2em;
+    background: #b30000;
+    border: 0.0625em solid #b30000;
+    border-radius: 2em;
+  }
+  .footer .social .facebook:before {
+    display: inline-block;
+    position: relative;
+    top: 22.5%;
+    left: 22.5%;
+    color: #f8f8f8;
+    font: 700 1rem 'Genericons';
+    content: '\f204';
+  }
+  .footer .logo-and-awards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1em;
+  }
+  .footer .logo-and-awards .logo, .footer .logo-and-awards .guidestar-link {
+    width: 25%;
+    margin: 0.5em;
+  }
+  .footer .logo-and-awards .guidestar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .footer .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    margin: 1em;
+  }
+  .footer .contact .email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0.15em;
+    font: 700 1rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+    color: #222;
+  }
+  .footer .contact .email__underline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 25%;
+    margin-bottom: 0.5em;
+    border: 0.125em solid #b30000;
+    border-radius: 0.125em;
+  }
+  .footer .contact .email__link {
+    font: 400 0.75rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+    text-decoration: none;
+    color: #222;
+  }
+  .footer .copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1em 0.5em;
+  }
+  .footer .copyright .copyright__text {
+    font: 400 0.75rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+    color: #222;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,9 +1,11 @@
-$primary-dark: #222
-$primary-light: #f8f8f8
 $accent: #b30000
+$neutral-dark: #222
+$neutral-light: #f8f8f8
+
 
 @mixin flex-center()
     display: flex
+
     justify-content: center
     align-items: center
 
@@ -14,28 +16,27 @@ $accent: #b30000
 
 @media screen and (min-width: 0em)
     .nav
+        display: flex
+
         width: 100%
         max-height: 10vh
 
-        display: flex
-
         .nav__list
+            display: flex
+            flex-flow: column nowrap
+
             width: 100%
             height: 100vh
 
-            display: flex
-            flex-flow: column nowrap
             position: absolute
            
-            background: #fefefe
+            background: $neutral-light
 
             visibility: hidden
             
             .nav__list-item
-                height: auto
-
                 font: 400 1em "Montserrat", "Lato", "Times New Roman", sans-serif
-                color: $primary-light
+                color: $neutral-light
                 text-align: center
                 
                 list-style: none
@@ -44,42 +45,40 @@ $accent: #b30000
 
                 .nav__link
                     text-decoration: none
-                    color: $primary-dark
+                    color: $neutral-dark
 
         .show
             visibility: visible
 
-        #navBurger //add @media for 0-238px
-            width: fit-content
-            height: fit-content
-
+        #navBurger
             @include flex-center()
             flex-flow: column nowrap
+
             transform: translate(85vw, 2.5vh)
 
             z-index: 1
 
             .burger-line1, .burger-line2, .burger-line3
                 width: 1.5em
-                height: .25em
+                height: 0.25em
 
                 margin: 0.125em 0 0.125em 0
 
+                background: $neutral-dark
                 border-radius: 1em
-                background: $primary-dark
-
 
         .navBurgerToggle
+
             .burger-line1
                 transform: translateY(0.5em) rotate(45deg)
-                transition: .1s ease-in
+                transition: 0.1s ease-in
             
             .burger-line2
                 visibility: hidden
 
             .burger-line3
                 transform: translateY(-0.5em) rotate(-45deg)
-                transition: .1s ease-in
+                transition: 0.1s ease-in
                         
     #wrapper
         width: 90%
@@ -99,7 +98,7 @@ $accent: #b30000
                 width: 75%
 
                 font: 700 1.5rem "Montserrat", "Lato", "Times New Roman", sans-serif
-                color: $primary-dark
+                color: $neutral-dark
                 text-align: center
             
             .landing-logo
@@ -120,25 +119,99 @@ $accent: #b30000
 
 
             .content__btn
-                width: 10em
-
                 @include flex-center()
 
-                border: .0625em solid $primary-dark
-                padding: .75em 0
+                width: 10em
+
+                padding: 0.75em 0
+
+                border: 0.0625em solid $neutral-dark
 
                 font: 400 1rem "Montserrat", "Lato", "Times New Roman", sans-serif
-                color: $primary-dark
+                color: $neutral-dark
                 text-decoration: none
 
     .footer
-        background: $primary-dark
+        background: $neutral-light
 
         .footer__text
             font: 400 .625rem "Montserrat", "Lato", "Times New Roman", sans-serif
-            color: $primary-light
+            color: $neutral-dark
 
-    .copyright
-        min-height: 10vh
+        .social
+            @include flex-center()
+            
+            padding: 0.5em 0
 
-        @include flex-center
+            .facebook
+                width: 2em
+                height: 2em
+
+                background: $accent
+                border: 0.0625em solid $accent
+                border-radius: 2em
+
+            .facebook:before
+                display: inline-block
+
+                position: relative
+                top: 22.5%
+                left: 22.5%
+
+                color: $neutral-light
+                font: 700 1rem 'Genericons'
+
+                content: '\f204'
+        
+        .logo-and-awards
+            @include flex-center()
+
+            margin: 1em
+            
+            .logo, .guidestar-link
+                width: 25%
+
+                margin: 0.5em
+
+            .guidestar
+                @include flex-center()
+
+                width: 100%
+
+        .contact
+            @include flex-center()
+            flex-flow: column nowrap
+            
+            margin: 1em
+
+            .email
+                @include flex-center()
+
+                margin-bottom: 0.15em
+
+                font: 700 1rem "Montserrat", "Lato", "Times New Roman", sans-serif
+                color: $neutral-dark
+
+            .email__underline
+                @include flex-center()
+                
+                width: 25%
+
+                margin-bottom: 0.5em
+
+                border: 0.125em solid $accent
+                border-radius: 0.125em
+
+            .email__link
+                font: 400 0.75rem "Montserrat", "Lato", "Times New Roman", sans-serif 
+                text-decoration: none
+                color: $neutral-dark
+
+        .copyright
+            @include flex-center
+
+            margin: 1em 0.5em
+
+            .copyright__text
+                font: 400 0.75rem "Montserrat", "Lato", "Times New Roman", sans-serif
+                color: $neutral-dark
