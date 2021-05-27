@@ -1,26 +1,30 @@
 $accent: #b30000
 $neutral-dark: #222
 $neutral-light: #f8f8f8
+$neutral-gray: #1b1f22
 
+$font-family: "Montserrat", "Lato", "Times New Roman", sans-serif
 
 @mixin flex-center()
     display: flex
-
     justify-content: center
     align-items: center
 
-* 
+*
     margin: 0
     padding: 0
     box-sizing: border-box
 
+
+    margin: 0
+
 @media screen and (min-width: 0em)
     .nav
         display: flex
+        justify-content: flex-end
 
-        width: 100%
-        max-height: 10vh
-
+        height: 10vh
+            
         .nav__list
             display: flex
             flex-flow: column nowrap
@@ -35,7 +39,7 @@ $neutral-light: #f8f8f8
             visibility: hidden
             
             .nav__list-item
-                font: 400 1em "Montserrat", "Lato", "Times New Roman", sans-serif
+                font: 400 1rem $font-family
                 color: $neutral-light
                 text-align: center
                 
@@ -54,7 +58,7 @@ $neutral-light: #f8f8f8
             @include flex-center()
             flex-flow: column nowrap
 
-            transform: translate(85vw, 2.5vh)
+            margin-right: 5%
 
             z-index: 1
 
@@ -87,17 +91,17 @@ $neutral-light: #f8f8f8
         margin: auto 5%
 
         .landing
-            max-height: 90vh
-
             @include flex-center
             flex-flow: column nowrap
+
+            max-height: 90vh
 
             padding: 25vh 0
 
             .title
                 width: 75%
 
-                font: 700 1.5rem "Montserrat", "Lato", "Times New Roman", sans-serif
+                font: 700 1.75rem $font-family
                 color: $neutral-dark
                 text-align: center
             
@@ -114,7 +118,7 @@ $neutral-light: #f8f8f8
 
                 margin: 0 0 1em 0
 
-                font: 400 1.6875rem "Montserrat", "Lato", "Times New Roman", sans-serif
+                font: 400 1.5rem $font-family
                 text-align: center
 
 
@@ -127,21 +131,24 @@ $neutral-light: #f8f8f8
 
                 border: 0.0625em solid $neutral-dark
 
-                font: 400 1rem "Montserrat", "Lato", "Times New Roman", sans-serif
+                font: 400 1rem $font-family
                 color: $neutral-dark
                 text-decoration: none
 
     .footer
+        margin: auto
+
         background: $neutral-light
 
         .footer__text
-            font: 400 .625rem "Montserrat", "Lato", "Times New Roman", sans-serif
+            font: 400 .625rem $font-family
             color: $neutral-dark
 
         .social
             @include flex-center()
+            flex-flow: row wrap
             
-            padding: 0.5em 0
+            padding: 1em 0
 
             .facebook
                 width: 2em
@@ -166,7 +173,7 @@ $neutral-light: #f8f8f8
         .logo-and-awards
             @include flex-center()
 
-            margin: 1em
+            margin: 2em 0
             
             .logo, .guidestar-link
                 width: 25%
@@ -182,20 +189,20 @@ $neutral-light: #f8f8f8
             @include flex-center()
             flex-flow: column nowrap
             
-            margin: 1em
+            margin: 2em 0
 
             .email
                 @include flex-center()
 
                 margin-bottom: 0.15em
 
-                font: 700 1rem "Montserrat", "Lato", "Times New Roman", sans-serif
+                font: 700 1.25rem $font-family
                 color: $neutral-dark
 
             .email__underline
                 @include flex-center()
                 
-                width: 25%
+                width: 40%
 
                 margin-bottom: 0.5em
 
@@ -203,15 +210,19 @@ $neutral-light: #f8f8f8
                 border-radius: 0.125em
 
             .email__link
-                font: 400 0.75rem "Montserrat", "Lato", "Times New Roman", sans-serif 
+                font: 400 0.875rem $font-family
                 text-decoration: none
                 color: $neutral-dark
 
-        .copyright
+            .email__link:hover
+                color: $accent
+
+        .copyright, .privacy-policy
             @include flex-center
 
-            margin: 1em 0.5em
+            margin: 2em 0
 
-            .copyright__text
-                font: 400 0.75rem "Montserrat", "Lato", "Times New Roman", sans-serif
+            .copyright__text, .privacy-policy__link
+                font: 400 0.875rem $font-family
                 color: $neutral-dark
+                text-align: center

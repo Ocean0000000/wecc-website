@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
 }
 
 @media screen and (min-width: 0em) {
@@ -10,8 +11,10 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
-    max-height: 10vh;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    height: 10vh;
   }
   .nav .nav__list {
     display: -webkit-box;
@@ -28,7 +31,7 @@
     visibility: hidden;
   }
   .nav .nav__list .nav__list-item {
-    font: 400 1em "Montserrat", "Lato", "Times New Roman", sans-serif;
+    font: 400 1rem "Montserrat", "Lato", "Times New Roman", sans-serif;
     color: #f8f8f8;
     text-align: center;
     list-style: none;
@@ -55,8 +58,7 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
-    -webkit-transform: translate(85vw, 2.5vh);
-            transform: translate(85vw, 2.5vh);
+    margin-right: 5%;
     z-index: 1;
   }
   .nav #navBurger .burger-line1, .nav #navBurger .burger-line2, .nav #navBurger .burger-line3 {
@@ -89,7 +91,6 @@
     margin: auto 5%;
   }
   #wrapper .landing {
-    max-height: 90vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -103,11 +104,12 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
+    max-height: 90vh;
     padding: 25vh 0;
   }
   #wrapper .landing .title {
     width: 75%;
-    font: 700 1.5rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+    font: 700 1.75rem "Montserrat", "Lato", "Times New Roman", sans-serif;
     color: #222;
     text-align: center;
   }
@@ -133,7 +135,7 @@
   #wrapper .content .content__text {
     width: 90%;
     margin: 0 0 1em 0;
-    font: 400 1.6875rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+    font: 400 1.5rem "Montserrat", "Lato", "Times New Roman", sans-serif;
     text-align: center;
   }
   #wrapper .content .content__btn {
@@ -154,10 +156,11 @@
     text-decoration: none;
   }
   .footer {
+    margin: auto;
     background: #f8f8f8;
   }
   .footer .footer__text {
-    font: 400 .625rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+    font: 400 0.625rem "Montserrat", "Lato", "Times New Roman", sans-serif;
     color: #222;
   }
   .footer .social {
@@ -170,7 +173,11 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0.5em 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    padding: 1em 0;
   }
   .footer .social .facebook {
     width: 2em;
@@ -198,7 +205,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 1em;
+    margin: 2em 0;
   }
   .footer .logo-and-awards .logo, .footer .logo-and-awards .guidestar-link {
     width: 25%;
@@ -230,7 +237,7 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
-    margin: 1em;
+    margin: 2em 0;
   }
   .footer .contact .email {
     display: -webkit-box;
@@ -243,7 +250,7 @@
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 0.15em;
-    font: 700 1rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+    font: 700 1.25rem "Montserrat", "Lato", "Times New Roman", sans-serif;
     color: #222;
   }
   .footer .contact .email__underline {
@@ -256,17 +263,20 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 25%;
+    width: 40%;
     margin-bottom: 0.5em;
     border: 0.125em solid #b30000;
     border-radius: 0.125em;
   }
   .footer .contact .email__link {
-    font: 400 0.75rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+    font: 400 0.875rem "Montserrat", "Lato", "Times New Roman", sans-serif;
     text-decoration: none;
     color: #222;
   }
-  .footer .copyright {
+  .footer .contact .email__link:hover {
+    color: #b30000;
+  }
+  .footer .copyright, .footer .privacy-policy {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -276,11 +286,12 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 1em 0.5em;
+    margin: 2em 0;
   }
-  .footer .copyright .copyright__text {
-    font: 400 0.75rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+  .footer .copyright .copyright__text, .footer .copyright .privacy-policy__link, .footer .privacy-policy .copyright__text, .footer .privacy-policy .privacy-policy__link {
+    font: 400 0.875rem "Montserrat", "Lato", "Times New Roman", sans-serif;
     color: #222;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
