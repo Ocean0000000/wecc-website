@@ -15,9 +15,6 @@ $font-family: "Montserrat", "Lato", "Times New Roman", sans-serif
     padding: 0
     box-sizing: border-box
 
-
-    margin: 0
-
 @media screen and (min-width: 0em)
     .nav
         display: flex
@@ -37,7 +34,7 @@ $font-family: "Montserrat", "Lato", "Times New Roman", sans-serif
             background: $neutral-light
 
             visibility: hidden
-            
+
             .nav__list-item
                 font: 400 1rem $font-family
                 color: $neutral-light
@@ -54,6 +51,7 @@ $font-family: "Montserrat", "Lato", "Times New Roman", sans-serif
         .show
             visibility: visible
 
+        
         #navBurger
             @include flex-center()
             flex-flow: column nowrap
@@ -217,12 +215,22 @@ $font-family: "Montserrat", "Lato", "Times New Roman", sans-serif
             .email__link:hover
                 color: $accent
 
-        .copyright, .privacy-policy
+        .copyright
             @include flex-center
 
             margin: 2em 0
 
-            .copyright__text, .privacy-policy__link
+            .copyright__text
+                font: 400 0.875rem $font-family
+                color: $neutral-dark
+                text-align: center
+        
+        .privacy-policy
+            @include flex-center
+            
+            padding-bottom: 2em
+
+            .privacy-policy__link
                 font: 400 0.875rem $font-family
                 color: $neutral-dark
                 text-align: center
