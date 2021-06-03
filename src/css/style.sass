@@ -1,5 +1,5 @@
 $accent: #b30000
-$neutral-dark: #222
+$neutral-dark: #222222
 $neutral-light: #f8f8f8
 $neutral-gray: #1b1f22
 
@@ -18,7 +18,8 @@ $font-family: "Montserrat", "Lato", "Times New Roman", sans-serif
 @media screen and (min-width: 0em)
     .nav
         display: flex
-        justify-content: flex-end
+        justify-content: space-between
+        align-items: center
 
         height: 10vh
             
@@ -30,10 +31,12 @@ $font-family: "Montserrat", "Lato", "Times New Roman", sans-serif
             height: 100vh
 
             position: absolute
+            left: 100%
+            top: 0
            
-            background: $neutral-light
+            transition: all 0.25s ease
 
-            visibility: hidden
+            background: $neutral-light
 
             .nav__list-item
                 font: 400 1rem $font-family
@@ -48,15 +51,14 @@ $font-family: "Montserrat", "Lato", "Times New Roman", sans-serif
                     text-decoration: none
                     color: $neutral-dark
 
-        .show
-            visibility: visible
-
-        
         #navBurger
             @include flex-center()
             flex-flow: column nowrap
-
+            
             margin-right: 5%
+
+            position: relative
+            left: 85%
 
             z-index: 1
 
@@ -68,8 +70,33 @@ $font-family: "Montserrat", "Lato", "Times New Roman", sans-serif
 
                 background: $neutral-dark
                 border-radius: 1em
+        
+        #navBurgerCheckbox
+            font-size: 1em
+            width: 1.5em
+            height: 1.5em
+            
+            position: absolute
+            left: 85%
 
-        .navBurgerToggle
+            z-index: 2
+            opacity: 0
+
+        #navBurgerCheckbox:checked ~ #navBurger .burger-line1
+            transform: translateY(0.5em) rotate(45deg)
+            transition: 0.1s ease-in
+            
+        #navBurgerCheckbox:checked ~ #navBurger .burger-line2
+            visibility: hidden
+
+        #navBurgerCheckbox:checked ~ #navBurger .burger-line3
+            transform: translateY(-0.5em) rotate(-45deg)
+            transition: 0.1s ease-in
+        
+        #navBurgerCheckbox:checked ~ .nav__list
+            left: 0
+
+        .nav__burger--toggle
 
             .burger-line1
                 transform: translateY(0.5em) rotate(45deg)
@@ -81,7 +108,10 @@ $font-family: "Montserrat", "Lato", "Times New Roman", sans-serif
             .burger-line3
                 transform: translateY(-0.5em) rotate(-45deg)
                 transition: 0.1s ease-in
-                        
+
+        .show-menu
+            left: 0
+
     #wrapper
         width: 90%
         height: fit-content
@@ -146,7 +176,7 @@ $font-family: "Montserrat", "Lato", "Times New Roman", sans-serif
             @include flex-center()
             flex-flow: row wrap
             
-            padding: 1em 0
+            padding-top: 2em
 
             .facebook
                 width: 2em
@@ -234,3 +264,9 @@ $font-family: "Montserrat", "Lato", "Times New Roman", sans-serif
                 font: 400 0.875rem $font-family
                 color: $neutral-dark
                 text-align: center
+
+@media screen and ( min-width: 48em )
+    .nav
+        #navBurger
+
+        #navBurgerCheckbox

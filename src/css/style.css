@@ -10,9 +10,12 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 10vh;
   }
   .nav .nav__list {
@@ -26,8 +29,11 @@
     width: 100%;
     height: 100vh;
     position: absolute;
+    left: 100%;
+    top: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
     background: #f8f8f8;
-    visibility: hidden;
   }
   .nav .nav__list .nav__list-item {
     font: 400 1rem "Montserrat", "Lato", "Times New Roman", sans-serif;
@@ -38,10 +44,7 @@
   }
   .nav .nav__list .nav__list-item .nav__link {
     text-decoration: none;
-    color: #222;
-  }
-  .nav .show {
-    visibility: visible;
+    color: #222222;
   }
   .nav #navBurger {
     display: -webkit-box;
@@ -58,29 +61,61 @@
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
     margin-right: 5%;
+    position: relative;
+    left: 85%;
     z-index: 1;
   }
   .nav #navBurger .burger-line1, .nav #navBurger .burger-line2, .nav #navBurger .burger-line3 {
     width: 1.5em;
     height: 0.25em;
     margin: 0.125em 0 0.125em 0;
-    background: #222;
+    background: #222222;
     border-radius: 1em;
   }
-  .nav .navBurgerToggle .burger-line1 {
+  .nav #navBurgerCheckbox {
+    font-size: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    left: 85%;
+    z-index: 2;
+    opacity: 0;
+  }
+  .nav #navBurgerCheckbox:checked ~ #navBurger .burger-line1 {
     -webkit-transform: translateY(0.5em) rotate(45deg);
             transform: translateY(0.5em) rotate(45deg);
     -webkit-transition: 0.1s ease-in;
     transition: 0.1s ease-in;
   }
-  .nav .navBurgerToggle .burger-line2 {
+  .nav #navBurgerCheckbox:checked ~ #navBurger .burger-line2 {
     visibility: hidden;
   }
-  .nav .navBurgerToggle .burger-line3 {
+  .nav #navBurgerCheckbox:checked ~ #navBurger .burger-line3 {
     -webkit-transform: translateY(-0.5em) rotate(-45deg);
             transform: translateY(-0.5em) rotate(-45deg);
     -webkit-transition: 0.1s ease-in;
     transition: 0.1s ease-in;
+  }
+  .nav #navBurgerCheckbox:checked ~ .nav__list {
+    left: 0;
+  }
+  .nav .nav__burger--toggle .burger-line1 {
+    -webkit-transform: translateY(0.5em) rotate(45deg);
+            transform: translateY(0.5em) rotate(45deg);
+    -webkit-transition: 0.1s ease-in;
+    transition: 0.1s ease-in;
+  }
+  .nav .nav__burger--toggle .burger-line2 {
+    visibility: hidden;
+  }
+  .nav .nav__burger--toggle .burger-line3 {
+    -webkit-transform: translateY(-0.5em) rotate(-45deg);
+            transform: translateY(-0.5em) rotate(-45deg);
+    -webkit-transition: 0.1s ease-in;
+    transition: 0.1s ease-in;
+  }
+  .nav .show-menu {
+    left: 0;
   }
   #wrapper {
     width: 90%;
@@ -109,7 +144,7 @@
   #wrapper .landing .title {
     width: 75%;
     font: 700 1.75rem "Montserrat", "Lato", "Times New Roman", sans-serif;
-    color: #222;
+    color: #222222;
     text-align: center;
   }
   #wrapper .landing .landing-logo {
@@ -149,9 +184,9 @@
             align-items: center;
     width: 10em;
     padding: 0.75em 0;
-    border: 0.0625em solid #222;
+    border: 0.0625em solid #222222;
     font: 400 1rem "Montserrat", "Lato", "Times New Roman", sans-serif;
-    color: #222;
+    color: #222222;
     text-decoration: none;
   }
   .footer {
@@ -160,7 +195,7 @@
   }
   .footer .footer__text {
     font: 400 0.625rem "Montserrat", "Lato", "Times New Roman", sans-serif;
-    color: #222;
+    color: #222222;
   }
   .footer .social {
     display: -webkit-box;
@@ -176,7 +211,7 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
-    padding: 1em 0;
+    padding-top: 2em;
   }
   .footer .social .facebook {
     width: 2em;
@@ -250,7 +285,7 @@
             align-items: center;
     margin-bottom: 0.15em;
     font: 700 1.25rem "Montserrat", "Lato", "Times New Roman", sans-serif;
-    color: #222;
+    color: #222222;
   }
   .footer .contact .email__underline {
     display: -webkit-box;
@@ -270,12 +305,12 @@
   .footer .contact .email__link {
     font: 400 0.875rem "Montserrat", "Lato", "Times New Roman", sans-serif;
     text-decoration: none;
-    color: #222;
+    color: #222222;
   }
   .footer .contact .email__link:hover {
     color: #b30000;
   }
-  .footer .copyright, .footer .privacy-policy {
+  .footer .copyright {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -287,9 +322,26 @@
             align-items: center;
     margin: 2em 0;
   }
-  .footer .copyright .copyright__text, .footer .copyright .privacy-policy__link, .footer .privacy-policy .copyright__text, .footer .privacy-policy .privacy-policy__link {
+  .footer .copyright .copyright__text {
     font: 400 0.875rem "Montserrat", "Lato", "Times New Roman", sans-serif;
-    color: #222;
+    color: #222222;
+    text-align: center;
+  }
+  .footer .privacy-policy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 2em;
+  }
+  .footer .privacy-policy .privacy-policy__link {
+    font: 400 0.875rem "Montserrat", "Lato", "Times New Roman", sans-serif;
+    color: #222222;
     text-align: center;
   }
 }

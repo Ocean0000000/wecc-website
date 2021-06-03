@@ -1,4 +1,4 @@
 $('#navBurger').on('click', function() {
-    $('#navBurger').toggleClass('navBurgerToggle');
-    $('#navList').toggleClass('show');
+    $('#navBurger').toggleClass('nav__burger--toggle');
+    $('#navList').toggleClass('show-menu');
 });
